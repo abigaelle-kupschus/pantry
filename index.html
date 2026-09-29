@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mon garde-manger</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Mon garde-manger</h1>
+<p class="sub" id="sub"></p>
+<input class="search" id="q" type="search" placeholder="Chercher un produit" aria-label="Chercher un produit">
+<div class="chips" id="chips"></div>
+<div id="list"></div>
+<div class="foot"><button id="exp">Sauvegarder</button><button id="imp">Restaurer</button></div>
+<button class="fab" id="add">+ Ajouter</button>
+
+<dialog id="dlg">
+<h2 id="dt" style="margin:0;font-size:22px">Nouveau produit</h2>
+<label for="fn">Produit</label><input id="fn" autocomplete="off" placeholder="Ex : pâtes, lait, riz">
+<label for="fq">Quantité</label><input id="fq" type="number" min="1" value="1" inputmode="numeric">
+<label for="fl">Où le ranger ?</label><select id="fl"></select>
+<label for="fd">À consommer avant (facultatif)</label><input id="fd" type="date">
+<div class="acts"><button class="del" id="fdel" type="button" hidden>Supprimer</button><button class="no" id="fno" type="button">Annuler</button><button class="ok" id="fok" type="button">Enregistrer</button></div>
+</dialog>
+
+<script src="app.js" defer></script>
+</body>
+</html>
