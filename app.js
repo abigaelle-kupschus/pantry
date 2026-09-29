@@ -1,4 +1,4 @@
-const LOC=["Placard","Frigo","Congélo","Autre"],KEY="garde-manger-v1";
+const LOC=["Placard","Frigo","Congélo","Garage"],KEY="garde-manger-v1";
 let items=[],flt="Tout",eid=null;
 try{items=JSON.parse(localStorage.getItem(KEY)||"[]")}catch(e){items=[]}
 const $=id=>document.getElementById(id);
