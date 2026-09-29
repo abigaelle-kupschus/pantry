@@ -8,7 +8,7 @@ const esc=s=>s.replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&qu
 $("fl").innerHTML=LOC.map(l=>`<option>${l}</option>`).join("");
 function render(){
   const q=$("q").value.trim().toLowerCase();
-  const soon=i=>{const n=days(i.d);return n!==null&&n<=3};
+  const soon=i=>{const n=days(i.d);return n!==null&&n<=7};
   $("chips").innerHTML=["Tout",...LOC,"Bientôt périmé"].map(c=>`<button class="chip" aria-pressed="${c===flt}" data-c="${c}">${c}</button>`).join("");
   let v=items.filter(i=>i.n.toLowerCase().includes(q)&&(flt==="Tout"||(flt==="Bientôt périmé"?soon(i):i.l===flt)));
   $("sub").textContent=items.length?`${items.length} produit${items.length>1?"s":""} en stock`:"Ajoute ton premier produit";
